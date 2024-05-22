@@ -9,21 +9,34 @@
     tools:context=".AdministratorActivity">
 
     <ImageView
+        android:id="@+id/loading"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/presentacion" />
+
+    <ImageView
         android:id="@+id/logoecci"
         android:layout_width="300dp"
         android:layout_height="110dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
+        android:layout_alignStart="@id/loading"
+        android:layout_alignTop="@+id/loading"
+        android:layout_alignEnd="@id/loading"
+        android:layout_alignBottom="@+id/loading"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
         app:srcCompat="@drawable/logo_ecci2" />
 
     <TextView
         android:id="@+id/administrador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logoecci"
+        android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
         android:text="ADMINISTRADOR"
         android:textColor="@color/red"
         android:textSize="36sp"
@@ -78,7 +91,7 @@
 
     <EditText
         android:id="@+id/edtName1"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/edtId1"
@@ -98,7 +111,7 @@
 
     <EditText
         android:id="@+id/edtLastName1"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/edtName1"
@@ -118,7 +131,7 @@
 
     <EditText
         android:id="@+id/edtCode1"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/edtLastName1"
@@ -138,7 +151,7 @@
 
     <EditText
         android:id="@+id/edtDate1"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@+id/edtCode1"
@@ -158,11 +171,12 @@
 
     <EditText
         android:id="@+id/edtEmail1"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/edtDate1"
-        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/btnLookfor"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="105dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/email"
         android:drawablePadding="10dp"
@@ -178,10 +192,13 @@
 
     <EditText
         android:id="@+id/edtPassword1"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_below="@+id/edtEmail1"
+        android:layout_toEndOf="@+id/edtLastName1"
         android:layout_marginTop="10dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/password"
@@ -199,7 +216,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAdd"
-        android:layout_width="160dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/edtPassword1"
         android:layout_below="@+id/edtPassword1"
@@ -212,7 +229,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnEdit"
-        android:layout_width="160dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/edtPassword1"
         android:layout_below="@+id/edtPassword1"
@@ -225,7 +242,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnEliminate"
-        android:layout_width="160dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/btnAdd"
         android:layout_below="@+id/btnAdd"
@@ -238,7 +255,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCerrar"
-        android:layout_width="160dp"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/btnEdit"
         android:layout_below="@+id/btnEdit"

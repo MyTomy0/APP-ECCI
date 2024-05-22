@@ -10,10 +10,11 @@
 
     <ImageView
         android:id="@+id/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         app:srcCompat="@drawable/presentacion" />
 
     <ImageView
@@ -24,18 +25,18 @@
         android:layout_alignTop="@+id/loading"
         android:layout_alignEnd="@id/loading"
         android:layout_alignBottom="@+id/loading"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
         app:srcCompat="@drawable/logo_ecci2" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:layout_below="@+id/loading"
+        android:layout_width="500dp"
+        android:layout_height="350dp"
         android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/loading"
+        android:layout_marginStart="20dp"
         android:orientation="vertical"
         android:background="@color/blue">
 
@@ -72,7 +73,6 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
             android:background="@drawable/btn_bg"
             android:text="Cerrar sesión"
             android:textColor="@color/black" />
@@ -80,4 +80,3 @@
     </LinearLayout>
 
 </RelativeLayout>
-

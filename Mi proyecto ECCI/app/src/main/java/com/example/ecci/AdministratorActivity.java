@@ -17,7 +17,6 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
-
 public class AdministratorActivity extends AppCompatActivity {
 
     EditText Id, Name, LastName, Code, Date, Email, Password;
@@ -64,7 +63,10 @@ public class AdministratorActivity extends AppCompatActivity {
     }
 
     private void ejecutarServicio(String URL) {
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, response -> Toast.makeText(getApplicationContext(), "OPERACION EXITOSA", Toast.LENGTH_SHORT).show(), error -> Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show()){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, URL,
+                response -> Toast.makeText(getApplicationContext(), "OPERACION EXITOSA",
+                        Toast.LENGTH_SHORT).show(), error -> Toast.makeText(getApplicationContext(),
+                error.toString(),Toast.LENGTH_SHORT).show()){
             @Override
             protected Map<String, String> getParams() {
                 Map<String,String> parametros= new HashMap<>();
@@ -82,7 +84,8 @@ public class AdministratorActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
     private void buscarId() {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.20.34/BasesDeDatos/get.php?id=" + Id.getText(), response -> {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST,
+                "http://192.168.20.34/BasesDeDatos/get.php?id=" + Id.getText(), response -> {
             if (response.startsWith("{")) {
             } else {
                 String[] data = response.split(",");
@@ -103,7 +106,8 @@ public class AdministratorActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
     private void eliminarId() {
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://192.168.20.34/BasesDeDatos/delete.php", response -> {
+        StringRequest stringRequest=new StringRequest(Request.Method.POST,
+                "http://192.168.20.34/BasesDeDatos/delete.php", response -> {
             Toast.makeText(getApplicationContext(), "EL ID FUE ELIMINADO", Toast.LENGTH_SHORT).show();
             limpiarFormulario();
         }, error -> Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show()){

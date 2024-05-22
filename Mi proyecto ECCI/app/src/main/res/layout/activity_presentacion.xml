@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,24 +12,29 @@
         android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/presentacion" />
+
+    <ImageView
+        android:id="@+id/loading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loading"
+        android:layout_centerInParent="true"
         app:srcCompat="@drawable/loading" />
 
     <ImageView
         android:id="@+id/logoecci"
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_marginTop="400dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_alignStart="@id/loading"
+        android:layout_alignTop="@+id/loading"
+        android:layout_alignEnd="@id/loading"
+        android:layout_alignBottom="@+id/loading"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
         app:srcCompat="@drawable/logo_ecci2" />
 
     <ProgressBar
@@ -36,11 +42,14 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:mirrorForRtl="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoecci" />
+        android:layout_alignStart="@+id/loading1"
+        android:layout_alignTop="@+id/loading1"
+        android:layout_alignEnd="@+id/loading1"
+        android:layout_alignBottom="@+id/loading1"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:indeterminateDrawable="@drawable/progress" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

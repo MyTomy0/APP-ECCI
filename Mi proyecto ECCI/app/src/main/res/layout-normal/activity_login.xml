@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red"
-    tools:context=".HomeActivity">
+    tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
         app:srcCompat="@drawable/presentacion" />
@@ -31,53 +31,74 @@
         app:srcCompat="@drawable/logo_ecci2" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/loading"
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:background="@color/blue">
 
         <TextView
-            android:id="@+id/bienvenido"
+            android:id="@+id/Login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="BIENVENIDO"
+            android:layout_marginTop="20dp"
+            android:text="INICIO DE SESIÓN"
             android:textColor="@color/red"
+            android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/estudiantes" />
-
-        <TextView
-            android:id="@+id/estudiante"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-
-            android:text="A ESTUDIANTE"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="CORREO ELECTRÓNICO:"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
             android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textColorHint="@color/white" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCerrar"
-            android:layout_width="200dp"
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="CONTRASEÑA:"
+            android:inputType="textPassword"
+            android:longClickable="false"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_bg"
-            android:text="Cerrar sesión"
+            android:text="Iniciar sesión"
             android:textColor="@color/black" />
 
     </LinearLayout>
 
 </RelativeLayout>
-

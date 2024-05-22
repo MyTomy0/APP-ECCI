@@ -32,8 +32,6 @@ public class PresentacionActivity extends AppCompatActivity {
             }
             startActivity(intent);
             fileList();
-        }, 1000);
+        }, 5000);
     }
-
 }
-
